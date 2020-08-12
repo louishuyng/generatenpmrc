@@ -9,6 +9,10 @@ inputs:
     description: "name of repo"
     required: true
     default: "louis"
+  working-directory:
+    description: "working directory"
+    required: true
+    default: "."
 runs:
   using: "node12"
   main: "index.js"

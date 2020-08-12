@@ -12,10 +12,14 @@ This action auto generate NPMRC For Project while need to install the private pa
 
 **Required** The name of the npmrc. Default `"louis"`.
 
+### `working directory`
+
+**Required** The working directory of the npmrc. Default `"."`.
 
 ## Example usage
 
 uses: actions/generatenpmrc@v1\
 with:\
-&nbsp;&nbsp;token: 'abcxyz'\
+&nbsp;&nbsp;token: '\${{ secerets.NPMRC_TOKEN }}'\
 &nbsp;&nbsp;name-repo: 'dev'
+&nbsp;&nbsp;working directory: '.'

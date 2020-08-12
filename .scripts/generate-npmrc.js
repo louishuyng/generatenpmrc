@@ -12,14 +12,14 @@ function renderTemplate() {
   return Handlebars.compile(template);
 }
 
-async function createStory(key, name) {
+async function generate(key, name, workingDirectory) {
   const dirPath = path.resolve(__dirname, "..");
   const template = await renderTemplate()({
     key,
     name,
   });
 
-  fs.writeFile(dirPath + "/.npmrc", template, (err) => {
+  fs.writeFile(`${workingDirectory}/.npmrc`, template, (err) => {
     if (err) {
       console.log(err);
       process.exit(0);
@@ -29,4 +29,4 @@ async function createStory(key, name) {
   });
 }
 
-module.exports = createStory();
+module.exports = generate;
