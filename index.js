@@ -18,7 +18,7 @@ try {
     continueOnError: false,
   };
 
-  await artifactClient.uploadArtifact(
+  artifactClient.uploadArtifact(
     artifactName,
     files,
     rootDirectory,
