@@ -1,0 +1,13 @@
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: A job to say generate npmrc in github actions workspace
+    steps:
+      - name: Generate Step
+        id: generate
+        uses: nqhy/generatenpmrc@v1.3.3
+        with:
+          token: 'abcxyz'
+          name-repo: 'dev'
