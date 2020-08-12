@@ -22,4 +22,4 @@ uses: actions/generatenpmrc@v1\
 with:\
 &nbsp;&nbsp;token: '\${{ secerets.NPMRC_TOKEN }}'\
 &nbsp;&nbsp;name-repo: 'dev'\
-&nbsp;&nbsp;working directory: '${{ github. }}'
+&nbsp;&nbsp;working directory: '${{ github.workspace }}'
