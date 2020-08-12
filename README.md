@@ -20,6 +20,6 @@ This action auto generate NPMRC For Project while need to install the private pa
 
 uses: actions/generatenpmrc@v1\
 with:\
-&nbsp;&nbsp;token: '\${{ secerets.NPMRC_TOKEN }}'\
+&nbsp;&nbsp;token: \${{ secerets.NPMRC_TOKEN }}\
 &nbsp;&nbsp;name-repo: 'dev'\
-&nbsp;&nbsp;working directory: '${{ github.workspace }}'
+&nbsp;&nbsp;working directory: ${{ github.workspace }}
