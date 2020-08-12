@@ -12,7 +12,7 @@ function renderTemplate() {
   return Handlebars.compile(template);
 }
 
-async function createStory(key, name) {
+async function generate(key, name) {
   const dirPath = path.resolve(__dirname, "..");
   const template = await renderTemplate()({
     key,
@@ -29,4 +29,4 @@ async function createStory(key, name) {
   });
 }
 
-module.exports = createStory();
+module.exports = generate;
