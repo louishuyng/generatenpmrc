@@ -1,0 +1,14 @@
+name: "Generate dotfile npmrc"
+description: "Auto Generate npmrc when running CI/CD Github Actions"
+inputs:
+  token:
+    description: "npmrc token key"
+    required: true
+    default: "xxxx"
+  name-repo:
+    description: "name of repo"
+    required: true
+    default: "louis"
+runs:
+  using: "node12"
+  main: "index.js"
